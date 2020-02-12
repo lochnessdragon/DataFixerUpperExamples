@@ -24,8 +24,8 @@ public class Main {
 		
 		
 		DataFixerBuilder dataFixerBuilder = new DataFixerBuilder(DataFixUtils.getVersion(DataFixUtils.makeKey(2)));
-		
-		Schema version1Schema = new Schema(DataFixUtils.makeKey(1), null);
+
+
 		
 		
 		logger.info("Adding Schemas");

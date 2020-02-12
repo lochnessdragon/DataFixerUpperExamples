@@ -37,3 +37,7 @@ dependencies {
   	// DataFixerUpper Repository
   	compile 'com.mojang:datafixerupper:1.0.20'
 }
+
+apply plugin: 'application'
+
+mainClassName = "DataFixerUpperExamples.Main"
