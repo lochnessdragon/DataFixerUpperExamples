@@ -17,6 +17,7 @@ import com.mojang.datafixers.types.DynamicOps;
 public class Main {
 	
 	public static void main(String args[]) {
+    System.out.println("Hello World!");
 		Logger logger = LogManager.getLogger();
 		
 		logger.info("Main started!");
