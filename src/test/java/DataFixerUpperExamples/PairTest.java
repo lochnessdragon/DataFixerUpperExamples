@@ -10,7 +10,7 @@ import org.junit.Test;
 import com.mojang.datafixers.util.Pair;
 
 public class PairTest {
-    @Test public void swapPairWorks() {
+    @Test public void pairSwapWorks() {
         
     	final Integer FIRST_INT = 10;
     	final Integer SECOND_INT = 20;
@@ -19,5 +19,11 @@ public class PairTest {
         Pair<Integer, Integer> swapped = testPair.swap();
         
         assertEquals("The first int of the normal pair should equal the second int of the swapped pair", FIRST_INT, swapped.getSecond());
+        assertEquals("The second int of the normal pair should equal the first int of the swapped pair.")
+    }
+    
+    @Test
+    public void checkPairEquals() {
+      Pair<Integer, Integer> pairToTest 
     }
 }

@@ -1,5 +1,7 @@
 package DataFixerUpperExamples;
 
+import DataFixerUpperExamples.schemas.Version1;
+
 import java.util.concurrent.Executors;
 
 import org.apache.logging.log4j.LogManager;
@@ -30,6 +32,7 @@ public class Main {
 		
 		
 		logger.info("Adding Schemas");
+		dataFixerBuilder.addSchema(Version1::new);
 		
 		
 		logger.info("Adding data fixes");

@@ -14,6 +14,10 @@ public class Version1 extends Schema {
 		super(versionKey, parent);
 	}
 	
+	public Version1() {
+	  super(1, null);
+	}
+	
 	public void registerTypes(final Schema schema, final Map<String, Supplier<TypeTemplate>> entityTypes, final Map<String, Supplier<TypeTemplate>> blockEntityTypes) {
 		schema.registerType(false, () -> { return "level"; }, DSL::remainder);
     }
