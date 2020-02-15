@@ -23,6 +23,9 @@ public class Version2 extends Schema {
 		schema.registerType(true, TypeReferences.RECURSIVE, () -> {
 			return DSL.or(DSL.constType(DSL.intType()), DSL.constType(DSL.namespacedString()));
 		});
+		schema.registerType(false, TypeReferences.SCORE, () -> {
+			return DSL.constType(DSL.intType());
+		});
 	}
 	
 	public Map<String, Supplier<TypeTemplate>> registerEntities(final Schema schema) {

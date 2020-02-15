@@ -9,4 +9,7 @@ public class TypeReferences {
 	public static final TypeReference RECURSIVE = () -> {
 		return "recursive";
 	};
+	public static final TypeReference SCORE = () -> {
+		return "score";
+	};
 }

@@ -1,13 +1,11 @@
 package DataFixerUpperExamples;
 
-import java.util.Objects;
 import java.util.concurrent.Executors;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.google.gson.JsonElement;
-import com.google.gson.stream.JsonReader;
 import com.mojang.datafixers.DataFixUtils;
 import com.mojang.datafixers.DataFixer;
 import com.mojang.datafixers.DataFixerBuilder;
@@ -25,13 +23,8 @@ public class Main {
 		Logger logger = LogManager.getLogger();
 		
 		logger.info("Main started!");
-		
-		
-		
+
 		DataFixerBuilder dataFixerBuilder = new DataFixerBuilder(DataFixUtils.getVersion(DataFixUtils.makeKey(2)));
-
-
-		
 		
 		logger.info("Adding Schemas");
 		Schema schema1 = dataFixerBuilder.addSchema(1, Version1::new);
@@ -39,7 +32,7 @@ public class Main {
 		
 		logger.info("Adding data fixes");
 		dataFixerBuilder.addFixer(ChangeLevelName.create(schema2, "Rename level", (something) -> {
-			return "hello";
+			return something.equals("hello") ? something : "hello";
 		}));
 		
 		logger.info("Building fixer.");
